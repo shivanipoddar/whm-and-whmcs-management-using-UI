@@ -7,9 +7,9 @@ import whmcspy
 
 
 usr = 'none'
-identifier = 'NliotAmvtmygRWeSmVXG0IOBpmwQtipA'
-secret = 'Uwka0vUqPvNDVNMWirhGilXOsZLoUbN2'
-whmcs = whmcspy.WHMCS('http://www.iserveradmin.com/support/includes/api.php', identifier, secret)
+identifier = 'identifier'
+secret = 'secret'
+whmcs = whmcspy.WHMCS('http://www.yourdomain.com/support/includes/api.php', identifier, secret)
 
 
 def login(request):
@@ -40,12 +40,12 @@ def adddom(request):
             li = []
             characters = string.ascii_letters + string.punctuation + string.digits
             ps = "".join(choice(characters) for x in range(randint(8, 16)))
-            server = pycpanel.conn(hostname='ovh1.servermanagementservice.com', password='$newlife@1401', )
+            server = pycpanel.conn(hostname='hostname.com', password='password', )
             if pn != 'none':
                 param = {
                     'username': un,
                     'domain': nm,
-                    'contactemail': "moniter@iserveradmin.in",
+                    'contactemail': "contact@mail.in",
                     'password': ps,
                     'pkgname': pn
                 }
@@ -90,7 +90,7 @@ def email(request):
             unm = request.POST.get('unm')
             characters = string.ascii_letters + string.punctuation + string.digits
             ps = "".join(choice(characters) for x in range(randint(8, 16)))
-            server = pycpanel.conn(hostname='ovh1.servermanagementservice.com', password='$newlife@1401', )
+            server = pycpanel.conn(hostname='hostname.com', password='password', )
             params = {
                 'email' : enm,
                 'password' : ps,
