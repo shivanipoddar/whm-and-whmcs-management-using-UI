@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Enter your server name</h1><br>
+        <form method="post" action="{% url 'accountlist' %}" >
+            {% csrf_token %}
+    	 	<input type="text" name="nm" placeholder="Enter your server name"><br><br>
+            <input type="text" name="ps" placeholder="Enter Password"><br><br>
+            <button class="btnlge bck" >List Accounts</button>
+        </form>
+
+{% endblock content %}

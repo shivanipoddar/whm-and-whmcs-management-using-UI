@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container1 bck1">
+<h1><center>Add Client to your whmcs account</center><br /></h1>
+</div>
+<div class="container1">
+    <div class="row">
+    	<div class="col">
+    	<form id="dom" method="post" action="{% url 'addclient' %}" >
+            {% csrf_token %}
+    	 	<input type="text" name="nm" placeholder="Enter First Name"><br><br>
+            <input type="text" name="ln" placeholder="Enter Last Name"><br><br>
+            <input type="text" name="em" placeholder="Enter Email"><br><br>
+            <input type="text" name="ad" placeholder="Enter Address"><br><br>
+            <input type="text" name="ct" placeholder="Enter City"><br><br>
+            <input type="text" name="st" placeholder="Enter State"><br><br>
+            <input type="text" name="pc" placeholder="Enter Postcode"><br><br>
+            <input type="text" name="pn" placeholder="Enter Phone Number"><br><br>
+            <button class="btnlge bck" >ADD CLIENT</button>
+        </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+{% block script %}
+
+{% endblock script %}

@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block content %}
+        <div class="container1 bck1">
+            <h1><center>Enter only existing Domain name</center></h1>
+        </div>
+        <div class="container1">
+            <div class="row1">
+
+            <form id="em" method="post" action="{% url 'email' %}" >
+                {% csrf_token %}
+                <input type="text" id= "dn" name="nm" placeholder="Enter Domain Name" >
+                <input type="text" name="unm" placeholder="Enter User Name">
+<!--                <i class="fa fa-plus-circle" id="pl" style="font-size:48px; "></i>-->
+<!--                <i id='ic' class='fa fa-minus' style='font-size:48px;'></i>-->
+                <div id="use"><input type="text" name="ce" placeholder="Enter Email User"><br>
+            <p > Note* enter only username of email to be created</p><br>
+        </div>
+                <center><button class="btnlge bck" >CREATE EMAIL</button></center>
+            </form>
+                </div>
+            </div>
+{% endblock content %}
+
+ {% block script %}
+<!--add element-->
+<!--document.getElementById("pl").onclick = function() {myFunction()};-->
+<!--function myFunction() {-->
+<!--   var d = document.getElementById("use");-->
+<!--   d.innerHTML += "<div id='unm' ><input type='text' name='ce' placeholder='Enter Email User'></div><br>";-->
+<!--}-->
+
+<!--&lt;!&ndash;remove element&ndash;&gt;-->
+<!--document.getElementById("ic").onclick = function() {Fun()};-->
+<!--function Fun() {-->
+<!--var div1 = document.getElementById('unm');-->
+<!--var div2 = document.getElementById('uml');-->
+<!--				div1.remove();-->
+<!--				div2.remove();-->
+<!--						}-->
+
+<!--get and print domain name-->
+<!--result = document.getElementById('dn').value;-->
+<!--document.getElementById("emi").onclick.document.getElementById('res').innerHTML = 4+2;-->
+{% endblock script %}
+
+
+<!--<script>-->
+<!--&lt;!&ndash;            var b=document.getElementById('email');&ndash;&gt;-->
+<!--&lt;!&ndash;            var c=document.getElementById('pl');&ndash;&gt;-->
+<!--&lt;!&ndash;            b.addEventListener('click',function(){&ndash;&gt;-->
+<!--&lt;!&ndash;            document.getElementById('em').style.display="";&ndash;&gt;-->
+<!--&lt;!&ndash;            document.getElementById('pl').style.display="";&ndash;&gt;-->
+<!--&lt;!&ndash;            });&ndash;&gt;-->
+<!--&lt;!&ndash;            c.addEventListener('click',function(){&ndash;&gt;-->
+<!--&lt;!&ndash;            document.getElementById('em').style.display="";&ndash;&gt;-->
+<!--&lt;!&ndash;            });&ndash;&gt;-->
+<!--</script>-->

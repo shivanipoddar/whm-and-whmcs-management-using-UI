@@ -1,0 +1,85 @@
+@charset "utf-8";
+/* CSS Document */
+
+.container1{
+	padding-top:12px;
+	width: 50%;
+    margin: auto;
+    background: #EFEDCF;
+}
+.row{
+margin-left:5px;
+}
+.row1{
+display:block;
+}
+}
+.bck1{
+	color:#FFF;
+	background:#F63;	
+}
+.row11{
+    display:inline;
+}
+.col11{
+display:inline;
+    width: 40%;
+    float: left;
+}
+.col11 input{
+    border: 1px solid #ccc;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.btnlgr{
+    margin-left:15px;
+	padding:5px;
+	border:none;
+	border-top:2px solid #F63;
+	width:15%;
+	height:45px;
+	background:#FFF;
+}
+.btnlge{
+	padding:5px;
+	border:none;
+	border-top-color:#F63;
+	width:80%;
+	height:50px;
+}
+select{
+	padding:5px;
+	width:90%;
+	border:none;
+	border-bottom:solid #000 1px;
+	height:35px;
+	margin-left: 12px;
+}
+.ipt{
+    width:5%;
+    display: inline;
+    margin-left:50px;
+}
+
+input {
+    margin-left:12px;
+    margin-bottom:15px;
+	padding:5px;
+	width:90%;
+	border:none;
+	border-bottom:solid #000 1px;
+	height:35px;
+}
+.active, .btn:hover {
+  background-color: #F63;
+  color: white;
+}
+.activeb, .btn:hover {
+	border-bottom:1px solid #CCC;
+	border-left:1px solid #CCC;
+	border-right:1px solid #CCC;
+}

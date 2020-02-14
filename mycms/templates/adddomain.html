@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block content %}
+      <div class="container1 bck1">
+<h1><center>DOMAIN AND EMAIL SETUP</center><br /></h1>
+</div>
+<div class="container1">
+    <div class="row">
+        <h6>Would you like to Create a DOMAIN </h6><br>
+    </div>
+            <input class="ipt" type="checkbox" id="email" onclick="dfun()" checked> Do you want to create EMAIL on this DOMAIN<br>
+
+    <div class="row">
+    	<div class="col">
+    	<form id="dom" method="post" action="{% url 'domain' %}" >
+            {% csrf_token %}
+    	 	<input type="text" name="nm" placeholder="Enter Domain Name"><br><br>
+            Please select the Server where you want Account
+            <select name="pn">
+                <option name="dedicated_ip" value="dedicated_ip">ovh1.servermanagementservice.com</option>
+                <option name="default" value="default" >ovh2.servermanagementservice.com</option>
+            </select><br /><br />
+        	Do you want Dedicated Ip on it?<br>
+            <select name="pn">
+                <option name="dedicated_ip" value="dedicated_ip">YES</option>
+                <option name="default" value="default" >NO</option>
+            </select><br /><br />
+            <input type="text" name="msg" placeholder="Enter Message for Admin"><br><br>
+
+            <div id="use"><input type="text" name="ce" placeholder="Enter Email User"><br>
+            <p > Note* enter only username of email to be created</p><br>
+        </div>
+
+<!--             <div id="use" class="row11">-->
+<!--                <div class="col11">-->
+<!--                    <input type="text" class="dem" id="em" name="ce" style="width:100%;	border-bottom:solid #000 1px;" placeholder="Enter Email User" >-->
+<!--&lt;!&ndash;                    <i class="fa fa-plus-circle" id="pl" style="font-size:48px; display:none;"></i>&ndash;&gt;-->
+<!--                </div>-->
+<!--                <div class="col11" style="font-size:12px;">-->
+<!--                    <p > Note* enter only username of email to be created</p>-->
+<!--                </div>-->
+<!--            </div>-->
+           <center> <button class="btnlge bck" >CREATE ACCOUNT AND OPEN TICKET</button></center>
+        </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+ {% block script %}
+function dfun() {
+var a=document.getElementById('use');
+var b=document.getElementById('pl');
+if (a.style.display === "none") {
+    a.style.display = "block";
+<!--    b.style.display = "block";-->
+  } else {
+    a.style.display = "none";
+<!--    b.style.display = "none";-->
+  }
+}
+<!--var b=document.getElementById('email');-->
+<!--var c=document.getElementById('pl');-->
+<!--b.addEventListener('click',function(){-->
+<!--    document.getElementById('em').style.display="";-->
+<!--    document.getElementById('pl').style.display="";-->
+<!--});-->
+<!--c.addEventListener('click',function(){-->
+<!--  document.getElementById('em').style.display="";-->
+<!--  });-->
+{% endblock script %}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>This Server Domain List</h1><br>
+{% for r in dom %}
+  <table>
+    <tr>{{ r }}</tr>
+  </table>
+{% endfor %}
+
+{% endblock content %}
